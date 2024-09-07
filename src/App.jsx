@@ -12,7 +12,7 @@ const App = () => {
     <div className="h-screen bg-[#EBEBEB] overflow-x-hidden overflow-y-auto">
       <div className="relative w-full">
         <Navbar />
-        <main className="pt-6 flex flex-col items-center w-full">
+        <main className="pt-1 flex py-3 px-3 flex-col items-center w-full">
           <TopComponent />
           <Table />
           {showInputs && <Data />}

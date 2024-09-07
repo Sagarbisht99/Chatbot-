@@ -9,8 +9,8 @@ const Navbar = () => {
   };
 
   return (
-    <header className="bg-gray-900 py-2 shadow-md w-full z-10 transition-all">
-      <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8">
+    <header className="bg-gray-900 py-1 shadow-md w-full z-10 transition-all">
+      <div className="container mx-auto flex items-center justify-between px-2 sm:px-4 md:px-6 lg:px-8">
         {/* Mobile Menu Button */}
         <div className="flex items-center sm:hidden">
           <button
@@ -19,7 +19,7 @@ const Navbar = () => {
             aria-label="Toggle navigation"
           >
             <svg
-              className="w-6 h-6"
+              className="w-5 h-5"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -45,21 +45,21 @@ const Navbar = () => {
         </div>
 
         {/* Logo and Title */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 sm:gap-4">
           <img
-            className="w-16 sm:w-24 md:w-32" // Adjust size for different screen sizes
+            className="w-12 sm:w-16 md:w-20"
             src="https://media.licdn.com/dms/image/v2/D4D0BAQHY13MjAoAkvg/company-logo_200_200/company-logo_200_200/0/1702551124247/beyond_chats_logo?e=2147483647&v=beta&t=lsHYl-3UKzJjL_Rc4KupCVZ7oPEQfHvcVwt3n73jDG8"
             alt="Company Logo"
           />
-          <p className="text-xl sm:text-2xl font-semibold text-white">
+          <p className="text-lg sm:text-xl font-semibold text-white">
             ChatBot MindMap
           </p>
         </div>
 
         {/* Profile Icon */}
         <div className="relative hidden sm:flex items-center">
-          <div className="text-white bg-blue-500 rounded-full p-2 flex items-center justify-center shadow-lg">
-            <CgProfile className="text-3xl" />
+          <div className="text-white bg-blue-500 rounded-full p-1 flex items-center justify-center shadow-lg">
+            <CgProfile className="text-2xl" />
           </div>
         </div>
       </div>
@@ -70,7 +70,7 @@ const Navbar = () => {
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out sm:hidden`}
       >
-        <div className="flex flex-col items-center pt-16">
+        <div className="flex flex-col items-center pt-12">
           <button
             onClick={toggleMobileMenu}
             className="text-white mb-4"
@@ -94,28 +94,28 @@ const Navbar = () => {
           <nav className="flex flex-col items-center">
             <a
               href="#"
-              className="text-white text-xl py-2"
+              className="text-white text-lg py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Dashboard
             </a>
             <a
               href="#"
-              className="text-white text-xl py-2"
+              className="text-white text-lg py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Team
             </a>
             <a
               href="#"
-              className="text-white text-xl py-2"
+              className="text-white text-lg py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Projects
             </a>
             <a
               href="#"
-              className="text-white text-xl py-2"
+              className="text-white text-lg py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Calendar

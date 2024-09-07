@@ -48,6 +48,7 @@ const Data = () => {
             <div className="relative">
               <textarea
                 value={descriptions}
+                autoFocus
                 onChange={handleDescriptionChange}
                 className="p-3 text-lg md:text-xl bg-[#F1F1F1] border border-[#003366] rounded-lg w-full h-[150px] resize-none"
                 placeholder="Description"

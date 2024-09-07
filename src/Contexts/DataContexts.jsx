@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react'
+import React, { createContext, useContext, useEffect, useState } from 'react'
 
 
 const DataContext =  createContext({});
@@ -17,9 +17,18 @@ const DataContexts = ({children}) => {
           setshowInputs(!showInputs);
     }
 
+    useEffect(() => {
+      const storedItems = JSON.parse(localStorage.getItem('items')) || [];
+      setitems(storedItems);
+    }, []);
+  
+ 
+    useEffect(() => {
+      localStorage.setItem('items', JSON.stringify(items));
+    }, [items]);
   return (
     <div>
-        <DataContext.Provider value={{clickingAddData , DeleteData , descriptions , setDescriptions , items ,setitems , showInputs , setshowInputs}} >
+        <DataContext.Provider value={{clickingAddData  , DeleteData , descriptions , setDescriptions , items ,setitems , showInputs , setshowInputs}} >
             {children}
         </DataContext.Provider>
     </div>
